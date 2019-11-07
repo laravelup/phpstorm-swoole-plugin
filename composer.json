@@ -3,7 +3,8 @@
     "description": "Swoole IDE Helper",
     "type": "project",
     "require": {
-        "swoole/ide-helper": "^4.4"
+        "swoole/ide-helper": "^4.4",
+        "cweagans/composer-patches": "^1.6"
     },
     "license": "Apache-2.0",
     "authors": [
@@ -11,5 +12,12 @@
             "name": "el7cosmos",
             "email": "el@elabee.me"
         }
-    ]
+    ],
+    "extra": {
+        "patches": {
+            "swoole/ide-helper": {
+                "Skip git add": "patches/skip-git-add.patch"
+            }
+        }
+    }
 }
